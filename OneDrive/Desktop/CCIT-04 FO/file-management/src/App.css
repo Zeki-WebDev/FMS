@@ -1,0 +1,948 @@
+/* ==========================================
+   FILE.ORG — VISUAL THEME
+   ========================================== */
+
+:root {
+  --purple: #7b1fa2;
+  --purple-light: #9c27b0;
+  --purple-soft: #f3e8f7;
+
+  --charcoal: #292929;
+  --charcoal-light: #353535;
+
+  --background: #f1f1f1;
+  --white: #ffffff;
+
+  --border: #dedede;
+
+  --text: #292929;
+  --text-muted: #777777;
+
+  --shadow:
+    0 3px 12px rgba(0, 0, 0, 0.06);
+}
+
+
+/* ==========================================
+   APPLICATION
+   ========================================== */
+
+.file-app {
+  width: 100%;
+  min-height: 100vh;
+
+  padding: 5px;
+
+  display: flex;
+
+  gap: 10px;
+
+  background: var(--background);
+
+  color: var(--text);
+
+  font-family:
+    "Segoe UI",
+    Arial,
+    Helvetica,
+    sans-serif;
+}
+/* ==========================================
+   SIDEBAR
+   ========================================== */
+
+.file-app .sidebar {
+  width: 245px;
+  min-width: 245px;
+
+  min-height: calc(100vh - 10px);
+
+  padding: 24px 15px;
+
+  background: var(--charcoal);
+
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+
+  color: #ffffff;
+
+  box-shadow:0 3px 10px rgba(0, 0, 0, 0.12);
+  position: sticky;
+  top: 0;
+  align-self: start;
+}
+
+
+/* Sidebar text */
+
+.file-app .sidebar h1,
+.file-app .sidebar h2,
+.file-app .sidebar h3,
+.file-app .sidebar h4,
+.file-app .sidebar p {
+  color: #ffffff;
+}
+
+
+/* ==========================================
+   SIDEBAR NAVIGATION
+   ========================================== */
+
+.file-app .sidebar ul {
+  margin: 20px 0 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.file-app .sidebar li {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+
+/* Navigation items */
+
+.file-app .sidebar a,
+.file-app .sidebar button {
+  width: 100%;
+
+  min-height: 40px;
+
+  padding: 0 11px;
+
+  margin-bottom: 4px;
+
+  display: flex;
+  border-radius: 8px; /* gives rounded corners on hover */
+  transition: background-color 0.2s ease, color 0.2s ease;
+  align-items: center;
+
+  background: transparent;
+
+  border: none;
+  border-radius: 5px;
+
+  color: #d7d7d7;
+
+  font-size: 14px;
+
+  text-decoration: none;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+
+/* Hover */
+
+.file-app .sidebar a:hover,
+.file-app .sidebar button:hover {
+ background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;                             
+  border-radius: 8px;                         
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+
+/* Active */
+
+.file-app .sidebar .active {
+  background: var(--purple);
+
+  color: #ffffff;
+}
+
+/* ==========================================
+   STORAGE BOX
+   ========================================== */
+
+.file-app .storage-box {
+  margin-top: auto;
+
+  padding: 16px 13px;
+
+  background: var(--charcoal-light);
+
+  border: 1px solid #444444;
+
+  border-radius: 8px;
+
+  color: #ffffff;
+}
+
+.file-app .storage-box h4 {
+  margin: 0 0 8px;
+
+  color: #ffffff;
+
+  font-size: 12px;
+
+  font-weight: 600;
+}
+
+.file-app .storage-box p {
+  margin: 0;
+
+  color: #cccccc;
+
+  font-size: 11px;
+}
+
+/* ==========================================
+   MAIN CONTENT
+   ========================================== */
+
+.file-app .main-content {
+  flex: 1;
+
+  min-width: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 15px;
+
+  margin: 0;
+}
+
+/* ==========================================
+   TOP HEADER
+   ========================================== */
+
+.file-app .main-content > header {
+  width: 100%;
+
+  min-height: 66px;
+
+  padding: 12px 20px;
+
+  display: flex;
+
+  align-items: center;
+
+  background: var(--white);
+
+  border: 1px solid var(--border);
+
+  border-radius: 10px;
+
+  box-shadow: var(--shadow);
+}
+
+/* ==========================================
+   SEARCH
+   ========================================== */
+
+.file-app .main-content > header input {
+  width: 300px;
+
+  height: 40px;
+
+  padding: 0 14px;
+
+  background: #fafafa;
+
+  border: 1px solid #d7d7d7;
+
+  border-radius: 6px;
+
+  color: var(--text);
+
+  font-size: 13px;
+
+  outline: none;
+
+  transition:
+    border 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.file-app .main-content > header input::placeholder {
+  color: #999999;
+}
+
+.file-app .main-content > header input:focus {
+  background: #ffffff;
+
+  border-color: var(--purple-light);
+
+  box-shadow:
+    0 0 0 3px var(--purple-soft);
+}
+
+/* ==========================================
+   WORKSPACE
+   ========================================== */
+
+.file-app .main-content > header > div {
+  color: var(--text);
+
+  font-size: 14px;
+}
+
+/* ==========================================
+   CONTENT BODY
+   ========================================== */
+
+.file-app .content-body {
+  flex: 1;
+
+  width: 100%;
+
+  padding: 30px;
+
+  background: var(--white);
+
+  border: 1px solid var(--border);
+
+  border-radius: 10px;
+
+  box-shadow: var(--shadow);
+}
+
+/* ==========================================
+   HEADINGS
+   ========================================== */
+
+.file-app .content-body h1,
+.file-app .content-body h2,
+.file-app .content-body h3 {
+  margin-top: 0;
+
+  color: var(--text);
+
+  font-family:
+    "Segoe UI",
+    Arial,
+    Helvetica,
+    sans-serif;
+}
+
+.file-app .content-body h2 {
+  margin-bottom: 18px;
+
+  font-size: 20px;
+
+  font-weight: 600;
+}
+
+/* ==========================================
+   UPLOAD BUTTON
+   ========================================== */
+
+.file-app .content-body button {
+  padding: 9px 16px;
+
+  background: var(--purple);
+
+  border: none;
+
+  border-radius: 5px;
+
+  color: #ffffff;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.15s ease;
+}
+
+.file-app .content-body button:hover {
+  background: var(--purple-light);
+
+  transform: translateY(-1px);
+}
+
+.file-app .content-body button:active {
+  transform: translateY(0);
+}
+
+/* ==========================================
+   FILE GRID
+   ========================================== */
+
+.file-app .file-grid {
+  width: 100%;
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(210px, 1fr)
+  );
+  gap: 16px;
+}
+
+/* ==========================================
+   FILE CARDS
+   ========================================== */
+
+.file-app .file-card {
+  min-height: 158px;
+
+  padding: 20px 16px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+
+  background: #ffffff;
+
+  border: 1px solid var(--border);
+
+  border-radius: 8px;
+
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.file-card button:first-child,
+.file-card .star-btn {
+  margin-right: 10px;
+}
+
+.file-app .file-card:hover {
+  transform: translateY(-2px);
+
+  border-color: #c5c5c5;
+
+  box-shadow:
+    0 7px 18px rgba(0, 0, 0, 0.07);
+}
+
+/* ==========================================
+   FILE ICON
+   ========================================== */
+
+.file-app .file-icon {
+  width: 46px;
+
+  height: 52px;
+
+  margin-bottom: 12px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: #fafafa;
+
+  border: 1px solid #777777;
+
+  border-radius: 4px;
+
+  color: #555555;
+
+  font-size: 18px;
+}
+
+/* ==========================================
+   FILE DETAILS
+   ========================================== */
+
+.file-app .file-details {
+  width: 100%;
+}
+
+.file-app .file-details h4 {
+  margin: 0;
+
+  color: #303030;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  line-height: 1.4;
+}
+
+.file-app .file-details p {
+  margin: 7px 0 0;
+
+  color: var(--text-muted);
+
+  font-size: 11px;
+}
+
+/* ==========================================
+   RESPONSIVE
+   ========================================== */
+
+@media (max-width: 850px) {
+
+  .file-app .sidebar {
+    width: 210px;
+
+    min-width: 210px;
+  }
+
+  .file-app .main-content > header input {
+    width: 220px;
+  }
+}
+
+
+@media (max-width: 650px) {
+
+  .file-app {
+    flex-direction: column;
+  }
+
+  .file-app .sidebar {
+    width: 100%;
+
+    min-width: 0;
+
+    min-height: auto;
+  }
+
+  .file-app .file-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+
+@media (max-width: 450px) {
+
+  .file-app .file-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .file-app .content-body {
+    padding: 20px;
+  }
+
+  .file-app .main-content > header input {
+    width: 100%;
+  }
+}
+
+/* ==========================================
+   HEADER POLISH
+   ========================================== */
+
+.file-app .main-content > header {
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.file-app .main-content > header input {
+  flex: 0 1 360px;
+}
+
+.file-app .main-content > header > div {
+  margin-left: auto;
+
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  color: #4a4a4a;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* ==========================================
+   SIDEBAR SPACING
+   ========================================== */
+
+.file-app .sidebar ul {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 5px;
+}
+
+.file-app .sidebar a,
+.file-app .sidebar button {
+  min-height: 42px;
+
+  padding: 0 12px;
+
+  border-radius: 6px;
+}
+
+/* ==========================================
+   ACTIVE NAVIGATION
+   ========================================== */
+
+.file-app .sidebar .active {
+  background: #7b1fa2;
+
+  color: #ffffff;
+
+  box-shadow:
+    0 2px 6px rgba(123, 31, 162, 0.25);
+}
+
+/* ==========================================
+   FILE CARD POLISH
+   ========================================== */
+
+.file-app .file-card {
+  position: relative;
+
+  overflow: hidden;
+}
+
+.file-app .file-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 3px;
+
+  background: #7b1fa2;
+
+  opacity: 0;
+
+  transition: opacity 0.2s ease;
+}
+
+.file-app .file-card:hover::before {
+  opacity: 1;
+}
+
+.file-app .file-card:hover {
+  border-color: #cfcfcf;
+
+  box-shadow:
+    0 8px 20px rgba(123, 31, 162, 0.08);
+}
+
+/* ==========================================
+   UPLOAD BUTTON POLISH
+   ========================================== */
+
+.file-app .content-body button {
+  box-shadow:
+    0 3px 8px rgba(123, 31, 162, 0.18);
+}
+
+.file-app .content-body button:hover {
+  background: #8e24aa;
+
+  box-shadow:
+    0 5px 12px rgba(123, 31, 162, 0.25);
+}
+
+/* ==========================================
+   PURPLE FOCUS
+   ========================================== */
+
+.file-app input:focus {
+  border-color: #9c27b0;
+
+  box-shadow:
+    0 0 0 3px rgba(156, 39, 176, 0.10);
+}
+
+/* ==========================================
+   SIDEBAR BRANDING
+   ========================================== */
+
+.file-app .sidebar h1 {
+  position: relative;
+
+  margin: 0 0 28px;
+
+  padding-left: 10px;
+
+  font-size: 24px;
+  font-weight: 700;
+
+  letter-spacing: -0.5px;
+}
+
+.file-app .sidebar h1::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  top: 4px;
+
+  width: 3px;
+  height: 22px;
+
+  background: #9c27b0;
+
+  border-radius: 3px;
+}
+
+/* ==========================================
+   NAVIGATION POLISH
+   ========================================== */
+
+.file-app .sidebar a,
+.file-app .sidebar button {
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    padding-left 0.2s ease;
+}
+
+.file-app .sidebar a:hover,
+.file-app .sidebar button:hover {
+  padding-left: 16px;
+
+  background: #353535;
+}
+
+.file-app .sidebar .active {
+  padding-left: 16px;
+}
+
+.file-app .sidebar *{
+  cursor: pointer !important;
+  user-select: none;
+}
+
+/* ==========================================
+   HEADER REFINEMENT
+   ========================================== */
+
+.file-app .main-content > header {
+  min-height: 64px;
+
+  padding: 10px 24px;
+
+  background: #333232;
+
+  border: 1px solid #e2e2e2;
+
+  box-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.file-app .main-content > header input {
+  height: 38px;
+
+  border-radius: 7px;
+}
+
+/* ==========================================
+   WORKSPACE BADGE
+   ========================================== */
+
+.file-app .main-content > header > div {
+  min-height: 38px;
+
+  padding: 0 13px;
+
+  background: #fafafa;
+
+  border: 1px solid #e2e2e2;
+
+  border-radius: 7px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  color: #444444;
+
+  font-size: 13px;
+}
+
+.file-app .main-content > header > div:hover {
+  border-color: #c9a5d3;
+
+  background: #f9f3fb;
+}
+
+/* ==========================================
+   RECENT FILES HEADER
+   ========================================== */
+
+.file-app .content-body h2 {
+  position: relative;
+
+  padding-left: 12px;
+
+  font-size: 21px;
+
+  letter-spacing: -0.3px;
+}
+
+.file-app .content-body h2::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  top: 3px;
+
+  width: 3px;
+  height: 20px;
+
+  background: #7b1fa2;
+
+  border-radius: 3px;
+}
+
+/* ==========================================
+   FILE ICON POLISH
+   ========================================== */
+
+.file-app .file-icon {
+  background: #faf7fb;
+
+  border-color: #cfcfcf;
+
+  color: #7b1fa2;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.file-app .file-card:hover .file-icon {
+  background: #f3e8f7;
+
+  border-color: #b985c5;
+
+  transform: translateY(-2px);
+}
+
+/* ==========================================
+   STORAGE PROGRESS BAR
+   ========================================== */
+
+.file-app .storage-box {
+  position: relative;
+  overflow: hidden;
+
+  padding: 16px 14px 22px;
+
+  box-sizing: border-box;
+}
+
+/* Background track */
+.file-app .storage-box::before {
+  content: "";
+
+  position: absolute;
+
+  left: 14px;
+  right: 14px;
+  bottom: 10px;
+
+  height: 5px;
+
+  background: #4a4a4a;
+
+  border-radius: 10px;
+}
+
+/* Purple progress */
+.file-app .storage-box::after {
+  content: "";
+
+  position: absolute;
+
+  left: 14px;
+  bottom: 10px;
+
+  width: calc((100% - 28px) * 0.45);
+
+  height: 5px;
+
+  background: #9c27b0;
+
+  border-radius: 10px;
+}
+
+/* ==========================================
+   CONTENT SPACING
+   ========================================== */
+
+.file-app .content-body {
+  padding: 30px;
+
+  min-height: calc(100vh - 100px);
+}
+
+.file-app .file-grid {
+  margin-top: 22px;
+}
+
+/* Universal Sidebar Hover */
+.file-app .sidebar *:hover {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  color: #ffffff !important;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+
+.file-card, 
+.file-card *, 
+.file-app .sidebar, 
+.file-app .sidebar * {
+  cursor: pointer !important;
+  user-select: none; 
+}
+/* Remove text cursor from headers and upload buttons */
+h2, h3, h4, 
+button, 
+.upload-btn, 
+
+/* 1. Universally set cursor to pointer and disable text selection everywhere */
+* {
+  cursor: pointer !important;
+  user-select: none !important;
+}
+
+/* 2. Preserve normal text input cursor ONLY for search bars and text fields */
+input, 
+textarea, 
+[contenteditable="true"] {
+  cursor: text !important;
+  user-select: text !important;
+}
+[class*="upload"] {
+  cursor: pointer !important;
+  user-select: none;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Ensures top items stay top and bottom items stick down */
+  height: 100vh;                  /* Ensures sidebar fills full screen height */
+}

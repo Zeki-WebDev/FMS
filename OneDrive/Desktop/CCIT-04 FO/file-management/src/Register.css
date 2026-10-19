@@ -1,0 +1,179 @@
+
+/* Registration page background */
+.register-page {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 16px;
+  box-sizing: border-box;
+  background: #595757;
+  font-family: Arial, sans-serif;
+}
+
+/* Main registration card */
+.register-card {
+  width: 100%;
+  max-width: 420px;
+  padding: 35px 40px;
+  margin: auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+  box-sizing: border-box;
+}
+
+/* Logo */
+.register-logo {
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.register-logo h1 {
+  margin: 0;
+  color: #172033;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+/* Subtitle */
+.register-subtitle {
+  margin: 8px 0 28px;
+  color: #777888;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* Registration form layout */
+.register-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* Form labels */
+.register-card form label {
+  display: block;
+  margin: 0 0 8px;
+  color: #172033;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* Space between form fields */
+.register-card form > div,
+.register-group {
+  margin-bottom: 18px;
+}
+
+/* Text boxes and department dropdown */
+.register-card form input,
+.register-card form select {
+  display: block;
+  width: 100%;
+  height: 45px;
+  margin: 0;
+  padding: 0 13px;
+  border: 1px solid #d0d0d5;
+  border-radius: 6px;
+  background: #fff;
+  color: #172033;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.register-card form input:focus,
+.register-card form select:focus {
+  border-color: #9224b0;
+  box-shadow: 0 0 0 2px rgba(146, 36, 176, 0.12);
+}
+
+/* Create account button */
+.register-button {
+  display: block;
+  width: 100%;
+  min-height: 46px;
+  margin: 5px 0 0;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  background: #9224b0;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.register-button:hover {
+  background: #791b94;
+}
+
+.register-button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+/* Error and success messages */
+.register-error,
+.register-success {
+  margin: 12px 0;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 13px;
+}
+
+.register-error {
+  background: #fff0f0;
+  color: #bd2525;
+}
+
+.register-success {
+  background: #effaf1;
+  color: #20733a;
+}
+
+/* Footer */
+.register-footer {
+  margin-top: 24px;
+  padding-top: 18px;
+  border-top: 1px solid #eee;
+  text-align: center;
+}
+
+.register-footer p {
+  margin: 0 0 12px;
+  color: #777888;
+  font-size: 13px;
+}
+
+/* Back to Login */
+.register-back-button {
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: #9224b0;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.register-back-button:hover {
+  text-decoration: underline;
+}
+
+/* Mobile layout */
+@media (max-width: 480px) {
+  .register-page {
+    align-items: flex-start;
+    padding: 20px 12px;
+  }
+
+  .register-card {
+    padding: 28px 22px;
+  }
+}
